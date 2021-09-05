@@ -1,0 +1,7 @@
+{
+  "name": "fantapioppe",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
