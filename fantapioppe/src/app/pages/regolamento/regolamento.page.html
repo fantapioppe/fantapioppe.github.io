@@ -1,0 +1,144 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>regolamento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card button (click)="carteHidden[0] = !carteHidden[0]">
+    <ion-card-title>Premi</ion-card-title>
+    <ion-card-content [hidden]="carteHidden[0]" class="flexColumn">
+      <ion-label><strong>Campionato</strong></ion-label>
+      <ion-label>Primo classificato: €70</ion-label>
+      <ion-label>Secondo classificato: €50</ion-label>
+      <ion-label>Terzo classificato: €25</ion-label>
+      <ion-label color="danger">l'ultimo classificato dovrà pagare €5 in aggiunta alla quota iniziale di €20 (totale di €25)</ion-label>
+      <br>
+      <ion-label><strong>Coppa</strong></ion-label>
+      <ion-label>Primo classificato: €20</ion-label>
+      <br>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card button (click)="carteHidden[1] = !carteHidden[1]">
+    <ion-card-title>Aste e Mercato</ion-card-title>
+    <ion-card-content [hidden]="carteHidden[1]" class="flexColumn">
+      <ion-label><strong>Mercato Iniziale</strong></ion-label>
+      <ion-label>Ogni partecipante dispone di 500mln. Il primo a "chiamare" un giocatore sarà l'ultimo classificato dell'anno prima (in mancanza di quest'ultimo, inizierà l'asta l'ultimo arrivato alla sede dell'asta iniziale).</ion-label>
+      <ion-label>L'asta seguirà i seguenti step:</ion-label>
+      <ion-label>Chiamata dei portieri</ion-label>
+      <ion-label>Chiamata dei difensori</ion-label>
+      <ion-label>Chiamata dei centrocampisti</ion-label>
+      <ion-label>Chiamata degli attaccanti</ion-label>
+      <ion-label>Per passare allo step successivo, ogni giocatore dovrà aver completato gli slot disponibili dei giocatori per quella posizione.</ion-label>
+      <ion-label color="danger">Non è consentito offrire più mln di quanti se ne possiede</ion-label>
+      <br>
+      <ion-label><strong>Mercato di riparazione</strong></ion-label>
+      <ion-label>Prima di procedere con l'inizio dell'asta di riparazione, tutti i giocatori devono aver comunicato i calciatori della proprio rosa da vendere.</ion-label>
+      <ion-label color="warning">ATTENZIONE: i calciatori sono venduti al prezzo attuale indicato da fantacalcio</ion-label>
+      <ion-label color="danger">Non è consentito ricomparere nella propria rosa un calciatore che è stato svincolato all'inizio dell'asta. (esempio la squadra A svincola Buffon, durante l'asta dei portieri il proprietario della squadra A non potrà fare offerte per tale giocatore).</ion-label>
+      <ion-label>Anche nel mercato ddi riparazione valgono le stesse regole del mercato iniziale.</ion-label>
+      <br>
+      <ion-label><strong>Scambi</strong></ion-label>
+      <ion-label>Gli innumerevoli scambi che avvengono ogni anno, dovranno essere fatti in un tempo utile che permetta all'amministratore di poter confermare gli scambi all'interno di Fantacalcio</ion-label>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card button (click)="carteHidden[2] = !carteHidden[2]">
+    <ion-card-title>Rose</ion-card-title>
+    <ion-card-content [hidden]="carteHidden[2]" class="flexColumn">
+      <ion-label><strong>Squadre</strong></ion-label>
+      <ion-label>Ogni squadra dispone di 25 calciatori distribuiti in:</ion-label>
+      <ion-label>3 portieri</ion-label>
+      <ion-label>8 difensori</ion-label>
+      <ion-label>8 centrocampisti</ion-label>
+      <ion-label>6 attaccanti</ion-label>
+      <ion-label>Non è consentita la mancanza di uno o più giocatori (es 7 centrocampisti).</ion-label>
+      <ion-label color="danger">Non è consentito offrire più mln di quanti se ne possiedono</ion-label>
+      <br>
+      <ion-label><strong>Panchine</strong></ion-label>
+      <ion-label>Durante l'inserimento della formazione la panchina sarà composta da 11 calciatori, l'allenatore potrà decidere quanti calciatori inserire per ogni ruolo (a suo rischio e pericolo).</ion-label>
+      <ion-label>Non esiste un ordine di ruolo nella panchina (si possono mischiare i vari ruoli). l'ordine di inserimento decreterà anche l'ordine dei possibili cambi da parte del sistema di fantacalcio.</ion-label>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card button (click)="carteHidden[3] = !carteHidden[3]">
+    <ion-card-title>Calcolo giornate</ion-card-title>
+    <ion-card-content [hidden]="carteHidden[3]" class="flexColumn">
+      <ion-label><strong>Bonus e malus</strong></ion-label>
+      <ion-label>goal fatto +3</ion-label>
+      <ion-label>assist +1</ion-label>
+      <ion-label>rigore parato +3</ion-label>
+      <ion-label>autogoal -3</ion-label>
+      <ion-label>rigore sbagliato -3</ion-label>
+      <ion-label>cartellino giallo -0.5</ion-label>
+      <ion-label>cartellino rosso -1</ion-label>
+      <ion-label>goal subito -1</ion-label>
+      <br>
+      <ion-label><strong>Soglie modificatore difesa</strong></ion-label>
+      <ion-label>Il modificatore difesa viene applicato quando giocano almeno 4 difensori e il portiere, si utilizzano le seguenti soglie della media dei voti base:</ion-label>
+      <ion-label>da 6 a 6.49 bonus di +1</ion-label>
+      <ion-label>da 6.5 a 6.99 bonus di +3</ion-label>
+      <ion-label>maggiore o uguale a 7 bonus di +6</ion-label>
+      <br>
+      <ion-label><strong>Soglie goal fatti</strong></ion-label>
+      <ion-label>il primo goal viene segnato al raggiungimento di 66pt, ogni goal ulteriore viene segnato raggiungendo le soglie fissate ogni 6pt (es 66, 72, 78 ...).</ion-label>
+      <br>
+      <ion-label><strong>Fonte dei voti e bonus</strong></ion-label>
+      <ion-label>i voti ufficiali da utilizzare sono quelli scelti all'interno del sistema Fantacalcio, tutte le altre fonti di voti non saranno prese in considerazione. Allo stesso modo i bonus e malus ufficiali da utilizzare sono quelli indicati dal sistema Fantacalcio.</ion-label>
+      <br>
+      <ion-label><strong>Casi Particolari</strong></ion-label>
+      <ion-label>In caso di mancato inserimento della formazione, il sistema recupererà la formazione della giornata precedente. Se un giocatore non inserisce la formazione alla prima giornata, la partita è persa a tavolino poichè non esiste una formazione da recuperare (anche nel caso in cui l'avversario non sia riuscito a raggiungere i 66pt).</ion-label>
+      <ion-label>Se una partita viene giocata normalmente (quindi esistono i voti) ma successivamente il giudice sportivo decreta la sconfitta di una squadra a tavolino (esempio hellas - Roma del 2020) si tengono validi i voti/bonus/malus che erano stati assegnati da fantacalcio.it</ion-label>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card button (click)="carteHidden[4] = !carteHidden[4]">
+    <ion-card-title>Voto d'ufficio</ion-card-title>
+    <ion-card-content [hidden]="carteHidden[4]" class="flexColumn">
+      <ion-label><strong>6 politico</strong></ion-label>
+      <ion-label>il 6 politico è garantito nei seguenti casi:</ion-label>
+      <ion-label>1) Portiere che giochi più di 45 minuti e che a fine partita è risultato senza voto </ion-label>
+      <ion-label>2) In caso di partita sospesa e rinviata oltre le 48 ore, tutti i giocatori di quella squadra (anche infortunati o panchinari, basta che il giocatore faccia parte di quella squadra)</ion-label>
+      <ion-label>3) Cause strane e non codificate oltre le 48 ore </ion-label>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card button (click)="carteHidden[5] = !carteHidden[5]">
+    <ion-card-title>COVID-19</ion-card-title>
+    <ion-card-content [hidden]="carteHidden[5]" class="flexColumn">
+      <ion-label><strong>COVID-19</strong></ion-label>
+      <ion-label>per ottenere il 6 politico di un calciatore affetto da COVID servono le seguenti situazioni:</ion-label>
+      <ion-label>1) il calciatore deve essere stato comunicato nel gruppo come giocatore covidato prima del calcolo della giornata. </ion-label>
+      <ion-label>2) fantacalcio.it è il luogo dove poter verificare se un giocatore abbiamo o meno il covid (se non è indicato nel sito, il calciatore non può essere considerato affetto da covid)</ion-label>
+      <ion-label>3) durante lo schieramento della formazione i covidati non possono essere inseriti come titolari, nel caso ci sia una riserva con il voto si prenderà in considerazione la riserva per il calcolo della giornata. Si prende in considerazione il calciatore covidato solo se si ha un buco in quel reparto. Se un calciatore che risulta aver preso il voto è stato lasciato in tribuna mentre è stato inserito un calciatore affetto da convid in panchina, questo clciatore non ha diritto al 6 politico poichè la squadra disponeva di voti sufficienti per quel reparto, in questo caso la squdra giocherà con un calciatore in meno.</ion-label>
+      <ion-label color="danger">ATTENZIONE: anche dalla tribuna si può considerare il calciatore covidato.</ion-label>
+      <br>
+      <ion-label>Detta diversamente, considerando un reparto (es. difensori), se in tribuna non hai voti, e dovresti giocare con un calciatore in meno perchè tra panchina e titolari non raggiungi abbastanza voti, considerando il modulo utilizzato, se hai un calciatore covidato, hai diritto al suo 6 politico.</ion-label>
+      <br>
+      <ion-label color="danger">Se un calciatore che su fantacalcio.it risulta essere covidato, ma partecipa normalmente alla partita, perde lo status di giocatore covidato.</ion-label>
+      <ion-label>esempio: Buffon su fantacalcio.it il venerdì sera risulta covidato, ma il giorno dopo durante la partita è presente in panchina, esso non può ricevere il 6 polito. Se prende il voto avrà quel voto durante il calcolo della giornata, se invece non entra in campo risulterà un calciatore normale rimasto in panchina, quindi S.V. </ion-label>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card button (click)="carteHidden[6] = !carteHidden[6]">
+    <ion-card-title>Multe</ion-card-title>
+    <ion-card-content [hidden]="carteHidden[6]" class="flexColumn">
+      <ion-label><strong>Legge Aulita</strong></ion-label>
+      <ion-label>Un qualunque giocatore che per 3 giornate consecutive non inserisce la formazione (recupero dal sistema) dovrà pagare una multa di €5</ion-label>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card button (click)="carteHidden[7] = !carteHidden[7]">
+    <ion-card-title>Eventuali Regole</ion-card-title>
+    <ion-card-content [hidden]="carteHidden[7]" class="flexColumn">
+      <ion-label>Nel caso in cui un calciatore muoia durante il torneo, la squadra che lo aveva ingaggiato, potra sostituirlo con un calciatore svincolato (i mln della squadra rimangono invariati). </ion-label>
+      <ion-label color="warning">In caso di eventi strani o non codificati, si decreta una decisione a maggioranza tra i partecipanti</ion-label>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

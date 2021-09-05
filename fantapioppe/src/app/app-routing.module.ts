@@ -10,6 +10,10 @@ const routes: Routes = [
   {
     path: 'folder/:id',
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
+  },
+  {
+    path: 'regolamento',
+    loadChildren: () => import('./pages/regolamento/regolamento.module').then( m => m.RegolamentoPageModule)
   }
 ];
 
