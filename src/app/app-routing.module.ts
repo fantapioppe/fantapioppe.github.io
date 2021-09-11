@@ -14,6 +14,10 @@ const routes: Routes = [
   {
     path: 'regolamento',
     loadChildren: () => import('./pages/regolamento/regolamento.module').then( m => m.RegolamentoPageModule)
+  },
+  {
+    path: 'rose',
+    loadChildren: () => import('./pages/rose/rose.module').then( m => m.RosePageModule)
   }
 ];
 
