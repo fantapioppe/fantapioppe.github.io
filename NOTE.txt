@@ -3,6 +3,7 @@ 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
 per deployare
 ionic build --prod
 angular-cli-ghpages --dir www
+(git add . == git commit -m "mex" == git push)
 
 oppure
 git subtree push --prefix dist origin gh-pages

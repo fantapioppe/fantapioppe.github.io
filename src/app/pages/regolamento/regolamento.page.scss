@@ -2,17 +2,6 @@ ion-card-title{
   margin: 10px;
 }
 
-.flexColumn{
-  display: flex;
-  flex-direction: column;
-}
-.whiteButton{
-  display: flex;
-  justify-content: space-between;
-  --color: "white";
-  --border-color: "black";
-}
-
 ion-card{
   background-color: rgb(34, 49, 44);
 }

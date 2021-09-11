@@ -18,6 +18,14 @@ const routes: Routes = [
   {
     path: 'rose',
     loadChildren: () => import('./pages/rose/rose.module').then( m => m.RosePageModule)
+  },
+  {
+    path: 'pronostici',
+    loadChildren: () => import('./pages/pronostici/pronostici.module').then( m => m.PronosticiPageModule)
+  },
+  {
+    path: 'news',
+    loadChildren: () => import('./pages/news/news.module').then( m => m.NewsPageModule)
   }
 ];
 

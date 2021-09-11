@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>News</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+  <ion-card *ngFor="let carta of carte">
+    <ion-img *ngIf="carta.immagine" [src]="carta.immagine"></ion-img>
+    <ion-card-title>{{carta.titolo}}</ion-card-title>
+    <ion-card-content>
+      <div *ngFor="let riga of carta.contenuto">
+        <ion-label>{{riga}}</ion-label>
+        <br>
+      </div>
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>
