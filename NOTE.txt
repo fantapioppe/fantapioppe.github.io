@@ -1,4 +1,5 @@
 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
+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
 
 per deployare
 ionic build --prod
