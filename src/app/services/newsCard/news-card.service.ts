@@ -15,6 +15,33 @@ export class NewsCardService {
   private news_2022 : Card[] = [
     {
       isChecked: false,
+      titolo: "Predica bene, razzola male",
+      contenuto: [
+        "Un giuda si aggira tra noi, tra menzogne e sotterfugi una squadra predica bene e razzola male.",
+        "Il presidente degli Atleti Di Cristo a inizio anno ha mosso una critica:",
+        "'Ragazzi non facciamo mai degli scambi però'.",
+        "La critica era lecita, in 10 anni di fantapioppe non ricordo un singolo scambio tra allenatori.",
+        "Fonti certe però svelano la vera natura del padovano di adozione, infatti ha ricevuto ben due proposte di scambio (fatto storico per la nostra competizione).",
+        "I DAMBROSIANI si erano spinti a proporre Dybala e Politano per Abraham e Keita, mentre addirittura gli Avellino Banfi hanno proposto lo scambio tra il bomber Dzeko e il londinese Abraham.",
+        "In entrambi i casi il patron illuminato ha rifiutato senza diritto di replica, rendendo vano il suo appello iniziale.",
+        "I tifosi campani con il senno di poi hanno avuto la meglio, riuscendo a trattenere Dzeko che sembra rinato nella città milane.",
+        "Abraham sembra un buon prospetto per il calcio italiano, ma sentiamo cosa ha da dire il presidente dei DAMBROSIANI: 'Gli Atleti di Cristo? che si tengano cosetto, prende solo pali, noi abbiamo Kaio Jorge!'."
+      ],
+      immagine: "./assets/img/news/gesu.jpg"
+    },
+    {
+      isChecked: false,
+      titolo: "Medioli si racconta, ecco perchè ha cambiato socità",
+      contenuto: [
+        "'Uno scandalo tutto all'italiana!' le dure parole di Medioli contro i vertici del fantacalcio, infatti lo scandalo che lo ha portato alla cessione della società Teamchiappetto ha fatto il giro del mondo.",
+        "'Miley Cyrus può tr***giare su una palla demolitrice mentre io sono costretto a vendere la società a 1€, a voi sembra giusto?', il portierone si riferisce al fatto che la lega calcio ha emanato la sentenza definitiva nella quale comandava la vendità immediata del Club Teamchiappetto.",
+        "Il motivo di questa sentenza è la netta e chiara oscenità che la vecchia società trasmetteva all'interno del mondo del calcio, un'oscenità che gli organi di vigilanza (fantacalcio.it) non potevano non condannare.",
+        "'Sono dispiaciuto per i miei vecchi tifosi, IL CALCIO E' DI TUTTI! Ora però ho davanti a me una nuova sfida, la nuova società è sana e determinata a fare bene, Criscito ci porterà in Champions se fantacalcio.it non ci banna anche questa squadra.'"
+      ],
+      immagine: "./assets/img/news/myly.jpeg"
+    },
+    {
+      isChecked: false,
       titolo: "Premi di Settembre",
       contenuto: [
         "Macinatore di classifica:  AC Denti",
