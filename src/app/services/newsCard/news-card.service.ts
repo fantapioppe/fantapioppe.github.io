@@ -15,6 +15,23 @@ export class NewsCardService {
   private news_2022 : Card[] = [
     {
       isChecked: false,
+      titolo: "Premi di Ottobre",
+      contenuto: [
+        "Macinatore di classifica:  AS Pilicueta",
+        "",
+        "Puntaiolo:  AS Pilicueta",
+        "",
+        "Freno a mano:  Gli Atleti Di Cristo",
+        "",
+        "Ottobre mese favorevole ad As Pilicueta che si porta a casa i due premi più ambiti (macinatore e puntaiolo).",
+        "Infatti è riuscito a segnare ben 13 goal in 4 partite, ben 5 goal contro i DAMBROSIANI e 4 goal contro gli Irociati, diciamo pure che il colpo Simeone si sta rivelando un ottimo affare.",
+        "Mentre nel gradino più basso si accomodano Gli Atleti Di Cristo che in 4 scontri si sono portati a casa ben 2 punti, voci di corridoio dicono che si sta mangiando le mani per non aver scambiato quel bidone di Abraham che in questo mese ha prodotto 0 goal e due ammonizioni.",
+        "E' d'obbligo fare una citazione d'onore anche se non ha ricevuto nessun premio, ma gli AC Denti continuano a sorprende, infatti la coppia d'attacco Immobile - Zapata (la IMZA direbbe studio sport) risulta una delle più prolifiche del campionato, ma occhio ai mai molli Banfetti che restano attaccatti al dentista."
+      ],
+      immagine: "./assets/img/news/crescita/crescitaBrignoGigi.jpg"
+    },
+    {
+      isChecked: false,
       titolo: "Predica bene, razzola male",
       contenuto: [
         "Un giuda si aggira tra noi, tra menzogne e sotterfugi una squadra predica bene e razzola male.",
